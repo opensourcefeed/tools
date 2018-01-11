@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EPOCH Convertor</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="Epoch Convertor, Convert epoch value to standard time, web based tool">
+	<meta name="description" content="A simple web based tool to instantly convert epoch value to corresponding time stamp.">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" ng-app="app" ng-controller="EpochController">
+		<h1>EPOCH Convertor</h1>
+		<hr>
+		<p class="text-right">{{currentTime | date:'dd-MM-yyyy hh:mm ss a'}}</p>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+	    			<input type="number" ng-change="convert()" class="form-control form-control-lg" ng-model="epoch" placeholder="Input epoch value">
+	  			</div>
+  			</div>
+		</div>
+		<hr>
+		<div class="row" ng-show="showTime" ng-cloak>
+			<div class="col-md-12">
+				<table class="table table-bordered">
+					<tr>
+						<td>Local time</td>
+						<td>{{epoch | date:'dd-MM-yyyy hh:mm a'}}</td>
+					</tr>
+					<tr>
+						<td>Singapore Time</td>
+						<td>{{epoch | date:'dd-MM-yyyy hh:mm a':'+8'}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12"><p><small>
+				<strong>Epoch time</strong> : 
+				Unix time (also known as POSIX time or epoch time)[citation needed] is a system for describing a point in time, defined as the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970,[1][note 1] minus the number of leap seconds that have taken place since then.[1][2][note 2] It is used widely in Unix-like and many other operating systems and file formats. Because the same timestamp can refer to two distinct instants of time around a leap second, it is neither a linear measure of time nor a true representation of UTC.[note 3] Unix time may be checked on most Unix systems by typing date +%s on the command line.
+				Source - <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank">Wikipedia</a></small></p>
+				<hr>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- blogger top responsive -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-6380671811722843"
+                        data-ad-slot="2308291502"
+                        data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+	<script src="script/app.js"></script>
+	<!-- Analytics tracking -->
+	<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89970640-1', 'auto');
+    ga('send', 'pageview');
+
+	</script>
+	<!-- end of tracking -->
+</body>
+</html>
