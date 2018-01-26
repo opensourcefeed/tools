@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Beautifier</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="JSON Viewer, Check JSON for syntax errors, Format JSON data, Beautify JSON, web based tool">
+	<meta name="description" content="An online JSON Viewer cum Beautifier to format JSON INPUT.">
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="navbar-brand" href="#">
+					
+					<h1>Developer Tools</h1>
+					<p>Simplifying life of web developers</p>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="/tools/jsonviewer">JSON Beautifier<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/tools/epochconvertor">EPOCH Convertor<span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="input">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<textarea rows="10"></textarea>
+						<div class="btn-block">
+							<a class="btn btn-unique" id="btn-beautify">Beautify</a>
+						</div>
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<section id="error">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8" id="error-message">
+						ERROR
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="output">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<pre id="output-json">JSON</pre>
+						<div class="btn-block">
+							<a class="btn btn-unique" id="btn-copy">Copy to clip board</a>
+						</div>
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+				
+			</div>
+		</section>
+	</main>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        		<!-- blogger top responsive -->
+		        <ins class="adsbygoogle"
+		            style="display:block"
+		            data-ad-client="ca-pub-6380671811722843"
+		            data-ad-slot="2308291502"
+		            data-ad-format="auto"></ins>
+		        <script>
+		        (adsbygoogle = window.adsbygoogle || []).push({});
+		    	</script>
+			</div>
+		</div>
+	</div>
+	<script src="script/jquery.min.js"></script>
+  	<script src="script/script.js"></script>
+  	<!-- Analytics tracking -->
+	<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89970640-1', 'auto');
+    ga('send', 'pageview');
+
+	</script>
+	<!-- end of tracking -->
+</body>
+</html>

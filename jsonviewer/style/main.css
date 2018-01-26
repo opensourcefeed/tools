@@ -1,0 +1,17 @@
+html {background: #20b2aa}
+header h1 {font-size: 24px; margin-bottom: 0}
+header p {font-size: 12px}
+textarea {width: 100%; height: 400px; border: none; margin-top: 20px;}
+#input {background: #20b2aa}
+.btn-block {text-align: right; padding-bottom: 20px}
+#output {background: #2f4f4f; display: none}
+#output pre {background: white; width : 100%; height: 400px; margin-top: 20px; font-size: 1rem}
+#error {background: #ff4500; text-align: center; color: white; padding: 20px; display: none}
+.btn-unique {background: orange; border-radius: 0}
+
+/**JSON Syntax Highlight **/
+.key {color: #008000}
+.number {color: #808000}
+.string {color: #000080}
+.boolean {color : #008080;}
+.null {color: #ffa500;}
