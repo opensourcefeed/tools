@@ -1,4 +1,9 @@
-header h1 {font-size: 24px; margin-bottom: 0}
+
+h1 {font-size: 1.5rem; text-align: center;}
+main {margin-top: 83px; background: #1b98b2; color: white}
+header h2 {font-size: 20px; margin-bottom: 0}
 header p {font-size: 12px}
 h1 {font-size: 1.5rem}
 .center {text-align: center;}
+.table {background-color: white; color: black}
+.form-control-lg, .form-control {border: none; border-radius: 0}

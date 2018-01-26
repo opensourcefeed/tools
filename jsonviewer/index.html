@@ -11,29 +11,27 @@
 </head>
 <body>
 	<header>
-		<div class="container">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="navbar-brand" href="#">
-					
-					<h1>Developer Tools</h1>
-					<p>Simplifying life of web developers</p>
-				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<div class="navbar-brand" href="#">
 
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link active" href="/tools/jsonviewer">JSON Beautifier<span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/tools/epochconvertor">EPOCH Convertor<span class="sr-only">(current)</span></a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+				<h2>Developer Tools</h2>
+				<p>Simplifying life of web developers</p>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="/tools/jsonviewer">JSON Beautifier<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tools/epochconvertor">EPOCH Convertor<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</header>
 	<main>
 		<section id="input">
@@ -42,6 +40,7 @@
 					<div class="col-md-2">
 					</div>
 					<div class="col-md-8">
+						<h1>JSON Beautifier</h1>
 						<textarea rows="10"></textarea>
 						<div class="btn-block">
 							<a class="btn btn-unique" id="btn-beautify">Beautify</a>

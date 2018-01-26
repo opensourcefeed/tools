@@ -11,161 +11,161 @@
 </head>
 <body>
 	<header>
-		<div class="container">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="navbar-brand" href="#">
-					<h1>Developer Tools</h1>
-					<p>Simplifying life of web developers</p>
-				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<div class="navbar-brand" href="#">
+				<h2>Developer Tools</h2>
+				<p>Simplifying life of web developers</p>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="/tools/jsonviewer">JSON Beautifier</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="/tools/epochconvertor">EPOCH Convertor<span class="sr-only">(current)</span></a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/tools/jsonviewer">JSON Beautifier</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="/tools/epochconvertor">EPOCH Convertor<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</header>
-	<hr>
-	<div class="container" ng-app="app" ng-controller="EpochController">
-		<p class="text-right">{{currentTime | date:'dd-MM-yyyy hh:mm ss a'}}</p>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="form-group">
-					<input type="number" ng-change="convert()" class="form-control form-control-lg" ng-model="epoch" placeholder="Input epoch value">
-				</div>
-				<div class="form-group">
-					<select class="form-control" ng-model="zone" ng-change="convert()">
-						<option value="-12">(GMT-12:00) International Date Line West</option>
-						<option value="-11">(GMT-11:00) Midway Island, Samoa</option>
-						<option value="-10">(GMT-10:00) Hawaii</option>
-						<option value="-9">(GMT-09:00) Alaska</option>
-						<option value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
-						<option value="-8">(GMT-08:00) Tijuana, Baja California</option>
-						<option value="-7">(GMT-07:00) Arizona</option>
-						<option value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-						<option value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
-						<option value="-6">(GMT-06:00) Central America</option>
-						<option value="-6">(GMT-06:00) Central Time (US & Canada)</option>
-						<option value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
-						<option value="-6">(GMT-06:00) Saskatchewan</option>
-						<option value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
-						<option value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
-						<option value="-5">(GMT-05:00) Indiana (East)</option>
-						<option value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
-						<option value="-4">(GMT-04:00) Caracas, La Paz</option>
-						<option value="-4">(GMT-04:00) Manaus</option>
-						<option value="-4">(GMT-04:00) Santiago</option>
-						<option value="-3.5">(GMT-03:30) Newfoundland</option>
-						<option value="-3">(GMT-03:00) Brasilia</option>
-						<option value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
-						<option value="-3">(GMT-03:00) Greenland</option>
-						<option value="-3">(GMT-03:00) Montevideo</option>
-						<option value="-2">(GMT-02:00) Mid-Atlantic</option>
-						<option value="-1">(GMT-01:00) Cape Verde Is.</option>
-						<option value="-1">(GMT-01:00) Azores</option>
-						<option value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
-						<option value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
-						<option value="+1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
-						<option value="+1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
-						<option value="+1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
-						<option value="+1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
-						<option value="+1">(GMT+01:00) West Central Africa</option>
-						<option value="+2">(GMT+02:00) Amman</option>
-						<option value="+2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
-						<option value="+2">(GMT+02:00) Beirut</option>
-						<option value="+2">(GMT+02:00) Cairo</option>
-						<option value="+2">(GMT+02:00) Harare, Pretoria</option>
-						<option value="+2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
-						<option value="+2">(GMT+02:00) Jerusalem</option>
-						<option value="+2">(GMT+02:00) Minsk</option>
-						<option value="+2">(GMT+02:00) Windhoek</option>
-						<option value="+3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
-						<option value="+3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
-						<option value="+3">(GMT+03:00) Nairobi</option>
-						<option value="+3">(GMT+03:00) Tbilisi</option>
-						<option value="+3.5">(GMT+03:30) Tehran</option>
-						<option value="+4">(GMT+04:00) Abu Dhabi, Muscat</option>
-						<option value="+4">(GMT+04:00) Baku</option>
-						<option value="+4">(GMT+04:00) Yerevan</option>
-						<option value="+4.5">(GMT+04:30) Kabul</option>
-						<option value="+5">(GMT+05:00) Yekaterinburg</option>
-						<option value="+5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
-						<option value="+5.5">(GMT+05:30) Sri Jayawardenapura</option>
-						<option value="+5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
-						<option value="+5.75">(GMT+05:45) Kathmandu</option>
-						<option value="+6">(GMT+06:00) Almaty, Novosibirsk</option>
-						<option value="+6">(GMT+06:00) Astana, Dhaka</option>
-						<option value="+6.5">(GMT+06:30) Yangon (Rangoon)</option>
-						<option value="+7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
-						<option value="+7">(GMT+07:00) Krasnoyarsk</option>
-						<option value="+8">(GMT+08:00) Kuala Lumpur, Singapore</option>
-						<option value="+8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
-						<option value="+8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
-						<option value="+8">(GMT+08:00) Perth</option>
-						<option value="+8">(GMT+08:00) Taipei</option>
-						<option value="+9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
-						<option value="+9">(GMT+09:00) Seoul</option>
-						<option value="+9">(GMT+09:00) Yakutsk</option>
-						<option value="+9.5">(GMT+09:30) Adelaide</option>
-						<option value="+9.5">(GMT+09:30) Darwin</option>
-						<option value="+10">(GMT+10:00) Brisbane</option>
-						<option value="+10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
-						<option value="+10">(GMT+10:00) Hobart</option>
-						<option value="+10">(GMT+10:00) Guam, Port Moresby</option>
-						<option value="+10">(GMT+10:00) Vladivostok</option>
-						<option value="+11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
-						<option value="+12">(GMT+12:00) Auckland, Wellington</option>
-						<option value="+12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
-						<option value="+13">(GMT+13:00) Nuku'alofa</option>
-					</select>
-				</div>
-				<div class="form-group center">
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" id="unit1" name="unit" ng-change="convert()" ng-model="unit" value="1000">
-						<label class="form-check-label" for="unit1">Seconds</label>
+	<main>
+		<div class="container" ng-app="app" ng-controller="EpochController">
+			<h1>EPOCH Convertor</h1>
+			<p class="text-right">{{currentTime | date:'dd-MM-yyyy hh:mm ss a'}}</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<input type="number" ng-change="convert()" class="form-control form-control-lg" ng-model="epoch" placeholder="Input epoch value">
 					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" ng-checked="true" id="unit2" name="unit" ng-change="convert()" ng-model="unit" value="1">
-						<label class="form-check-label" for="unit2">Milliseconds</label>
+					<div class="form-group">
+						<select class="form-control" ng-model="zone" ng-change="convert()">
+							<option value="-12">(GMT-12:00) International Date Line West</option>
+							<option value="-11">(GMT-11:00) Midway Island, Samoa</option>
+							<option value="-10">(GMT-10:00) Hawaii</option>
+							<option value="-9">(GMT-09:00) Alaska</option>
+							<option value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+							<option value="-8">(GMT-08:00) Tijuana, Baja California</option>
+							<option value="-7">(GMT-07:00) Arizona</option>
+							<option value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+							<option value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+							<option value="-6">(GMT-06:00) Central America</option>
+							<option value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+							<option value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+							<option value="-6">(GMT-06:00) Saskatchewan</option>
+							<option value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+							<option value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+							<option value="-5">(GMT-05:00) Indiana (East)</option>
+							<option value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+							<option value="-4">(GMT-04:00) Caracas, La Paz</option>
+							<option value="-4">(GMT-04:00) Manaus</option>
+							<option value="-4">(GMT-04:00) Santiago</option>
+							<option value="-3.5">(GMT-03:30) Newfoundland</option>
+							<option value="-3">(GMT-03:00) Brasilia</option>
+							<option value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+							<option value="-3">(GMT-03:00) Greenland</option>
+							<option value="-3">(GMT-03:00) Montevideo</option>
+							<option value="-2">(GMT-02:00) Mid-Atlantic</option>
+							<option value="-1">(GMT-01:00) Cape Verde Is.</option>
+							<option value="-1">(GMT-01:00) Azores</option>
+							<option value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+							<option value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+							<option value="+1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+							<option value="+1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+							<option value="+1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+							<option value="+1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+							<option value="+1">(GMT+01:00) West Central Africa</option>
+							<option value="+2">(GMT+02:00) Amman</option>
+							<option value="+2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+							<option value="+2">(GMT+02:00) Beirut</option>
+							<option value="+2">(GMT+02:00) Cairo</option>
+							<option value="+2">(GMT+02:00) Harare, Pretoria</option>
+							<option value="+2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+							<option value="+2">(GMT+02:00) Jerusalem</option>
+							<option value="+2">(GMT+02:00) Minsk</option>
+							<option value="+2">(GMT+02:00) Windhoek</option>
+							<option value="+3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+							<option value="+3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+							<option value="+3">(GMT+03:00) Nairobi</option>
+							<option value="+3">(GMT+03:00) Tbilisi</option>
+							<option value="+3.5">(GMT+03:30) Tehran</option>
+							<option value="+4">(GMT+04:00) Abu Dhabi, Muscat</option>
+							<option value="+4">(GMT+04:00) Baku</option>
+							<option value="+4">(GMT+04:00) Yerevan</option>
+							<option value="+4.5">(GMT+04:30) Kabul</option>
+							<option value="+5">(GMT+05:00) Yekaterinburg</option>
+							<option value="+5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+							<option value="+5.5">(GMT+05:30) Sri Jayawardenapura</option>
+							<option value="+5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+							<option value="+5.75">(GMT+05:45) Kathmandu</option>
+							<option value="+6">(GMT+06:00) Almaty, Novosibirsk</option>
+							<option value="+6">(GMT+06:00) Astana, Dhaka</option>
+							<option value="+6.5">(GMT+06:30) Yangon (Rangoon)</option>
+							<option value="+7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+							<option value="+7">(GMT+07:00) Krasnoyarsk</option>
+							<option value="+8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+							<option value="+8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+							<option value="+8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+							<option value="+8">(GMT+08:00) Perth</option>
+							<option value="+8">(GMT+08:00) Taipei</option>
+							<option value="+9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+							<option value="+9">(GMT+09:00) Seoul</option>
+							<option value="+9">(GMT+09:00) Yakutsk</option>
+							<option value="+9.5">(GMT+09:30) Adelaide</option>
+							<option value="+9.5">(GMT+09:30) Darwin</option>
+							<option value="+10">(GMT+10:00) Brisbane</option>
+							<option value="+10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+							<option value="+10">(GMT+10:00) Hobart</option>
+							<option value="+10">(GMT+10:00) Guam, Port Moresby</option>
+							<option value="+10">(GMT+10:00) Vladivostok</option>
+							<option value="+11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+							<option value="+12">(GMT+12:00) Auckland, Wellington</option>
+							<option value="+12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+							<option value="+13">(GMT+13:00) Nuku'alofa</option>
+						</select>
+					</div>
+					<div class="form-group center">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="unit1" name="unit" ng-change="convert()" ng-model="unit" value="1000">
+							<label class="form-check-label" for="unit1">Seconds</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" ng-checked="true" id="unit2" name="unit" ng-change="convert()" ng-model="unit" value="1">
+							<label class="form-check-label" for="unit2">Milliseconds</label>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<hr>
-		<div class="row" ng-show="showTime" ng-cloak>
-			<div class="col-md-12">
-				<table class="table table-bordered">
-					<tr>
-						<td>Local time</td>
-						<td>{{epoch * unit | date:'dd-MM-yyyy hh:mm a'}}</td>
-					</tr>
-					<tr>
-						<td>Adjusted Time (GMT {{zone}})</td>
-						<td>{{epoch * unit | date:'dd-MM-yyyy hh:mm a':zone}}</td>
-					</tr>
-				</table>
+			<hr>
+			<div class="row" ng-show="showTime" ng-cloak>
+				<div class="col-md-12">
+					<table class="table table-bordered">
+						<tr>
+							<td>Local time</td>
+							<td>{{epoch * unit | date:'dd-MM-yyyy hh:mm a'}}</td>
+						</tr>
+						<tr>
+							<td>Adjusted Time (GMT {{zone}})</td>
+							<td>{{epoch * unit | date:'dd-MM-yyyy hh:mm a':zone}}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-12"><p><small>
+					<strong>Epoch time</strong> : 
+					Unix time (also known as POSIX time or epoch time)[citation needed] is a system for describing a point in time, defined as the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970,[1][note 1] minus the number of leap seconds that have taken place since then.[1][2][note 2] It is used widely in Unix-like and many other operating systems and file formats. Because the same timestamp can refer to two distinct instants of time around a leap second, it is neither a linear measure of time nor a true representation of UTC.[note 3] Unix time may be checked on most Unix systems by typing date +%s on the command line.
+					Source - <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank">Wikipedia</a></small></p>
+					<hr>
+
+				</div>
 			</div>
 		</div>
-		<hr>
-		<div class="row">
-			<div class="col-md-12"><p><small>
-				<strong>Epoch time</strong> : 
-				Unix time (also known as POSIX time or epoch time)[citation needed] is a system for describing a point in time, defined as the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970,[1][note 1] minus the number of leap seconds that have taken place since then.[1][2][note 2] It is used widely in Unix-like and many other operating systems and file formats. Because the same timestamp can refer to two distinct instants of time around a leap second, it is neither a linear measure of time nor a true representation of UTC.[note 3] Unix time may be checked on most Unix systems by typing date +%s on the command line.
-				Source - <a href="https://en.wikipedia.org/wiki/Unix_time" target="_blank">Wikipedia</a></small></p>
-				<hr>
-				
-			</div>
-		</div>
-	</div>
+	</main>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
