@@ -37,8 +37,8 @@ $(document).ready(function() {
 
      // animate
      $('html, body').animate({
-         scrollTop: $(element).offset().top
-       }, 300);
+         scrollTop: $(element).offset().top - 100
+       }, 500);
   }
 
   $("#btn-copy").on('click', function() {
