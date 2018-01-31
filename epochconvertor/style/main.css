@@ -1,6 +1,7 @@
 
 h1 {font-size: 1.5rem; text-align: center;}
-html, main, footer {margin-top: 83px; background: #1b98b2; color: white}
+html, main, footer {background: #1b98b2; color: white}
+main {margin-top: 86px}
 header h2 {font-size: 20px; margin-bottom: 0}
 header p {font-size: 12px}
 h1 {font-size: 1.5rem}

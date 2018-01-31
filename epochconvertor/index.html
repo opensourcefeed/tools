@@ -35,7 +35,7 @@
 	<main>
 		<div class="container" ng-app="app" ng-controller="EpochController">
 			<h1>EPOCH Convertor</h1>
-			<p class="text-right">{{currentTime | date:'dd-MM-yyyy hh:mm ss a'}}</p>
+			<p class="text-right">{{currentTime | date:'dd-MM-yyyy HH:mm ss'}}</p>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
@@ -145,11 +145,11 @@
 					<table class="table table-bordered">
 						<tr>
 							<td>Local time</td>
-							<td>{{epoch * unit | date:'dd-MM-yyyy hh:mm a'}}</td>
+							<td>{{epoch * unit | date:'dd-MM-yyyy HH:mm'}}</td>
 						</tr>
 						<tr>
 							<td>Adjusted Time (GMT {{zone}})</td>
-							<td>{{epoch * unit | date:'dd-MM-yyyy hh:mm a':zone}}</td>
+							<td>{{epoch * unit | date:'dd-MM-yyyy HH:mm':zone}}</td>
 						</tr>
 					</table>
 				</div>
