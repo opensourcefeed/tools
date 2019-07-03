@@ -63,6 +63,43 @@ $(document).ready(function() {
       
     }
   });
+    
+  $('#tablify').on('click', function () {
+      var jsonString = $("#input textarea").val();
+      try {
+            var jsonObject = JSON.parse(jsonString);
+			function formatObject(jsonObject) {
+				let table = '';
+				if (typeof jsonObject == 'string' || typeof jsonObject == 'number' || 
+					typeof jsonObject == 'boolean') {
+					table = jsonObject;
+				} else if (typeof jsonObject === 'object') {
+					table = '<table>';
+					for (var key in jsonObject) {
+					    if (jsonObject.hasOwnProperty(key)) {
+					    	table += '<tr>';
+					    	table += '<td>' + key + '</td>';
+					    	table += '<td>' + formatObject(jsonObject[key]) + '</td>';
+					        table += '</tr>';
+					    }
+					}
+					table += '</table>';
+				} else {
+					console.log(typeof jsonObject);
+				}
+				return table;
+			}
+
+			document.getElementById('json-table').innerHTML = formatObject(jsonObject);
+			smoothScroll('#json-table');
+      } catch  (e) {
+          $("#error-message").text(e);
+          $("#output").hide();
+          $("#error").fadeIn(function(){
+            smoothScroll("#error");
+          });
+      }
+  });
 
 });
 
