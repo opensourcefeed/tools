@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JSON Beautifier</title>
+	<title>XML Viewer</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="keywords" content="JSON Viewer, Check JSON for syntax errors, Format JSON data, Beautify JSON, web based tool">
-	<meta name="description" content="An online JSON Viewer cum Beautifier to format JSON INPUT.">
+	<meta name="keywords" content="XML Viewer, Check XML for syntax errors, Format XML data, Beautify XML, web based tool">
+	<meta name="description" content="An online XML Viewer cum Beautifier to format XML INPUT.">
 	<link rel="stylesheet" href="style/bootstrap.min.css">
 	<link rel="stylesheet" href="style/main.css">
 </head>
@@ -24,10 +24,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link active" href="/tools/jsonviewer">JSON Beautifier<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="/tools/jsonviewer">JSON Beautifier</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/tools/xmlviewer">XML Beautifier</a>
+						<a class="nav-link active" href="/tools/xmlviewer">XML Beautifier<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/tools/epochconvertor">EPOCH Convertor</a>
@@ -41,11 +41,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1>JSON Beautifier</h1>
+						<h1>XML Beautifier</h1>
 						<textarea rows="10"></textarea>
 						<div class="btn-block">
 							<a class="btn btn-unique" id="btn-beautify">Beautify</a>
-							<a class="btn btn" id="tablify">Tabilify</a>
 						</div>
 					</div>
 				</div>
@@ -65,7 +64,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<pre id="output-json">JSON</pre>
+						<pre id="output-xml">XML</pre>
 						<div class="btn-block">
 							<a class="btn btn-unique" id="btn-copy">Copy to clip board</a>
 						</div>
@@ -85,12 +84,11 @@
 		<script>
 		     (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-		<section id="json-table"></div>
+		<section id="XML-table"></div>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
   	<script src="script/script.js"></script>
   	<!-- Analytics tracking -->
 	<script>
